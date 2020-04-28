@@ -1,0 +1,117 @@
+	Language	nonderived	basic	gb	ry	latitude	longitude	macroarea	genus	family	altitude
+0	Abidji	3.5	5.0	no	no	5.66667	-4.58333	Africa	Kwa	Niger-Congo	92
+1	Agarabi	5.0	5.0	no	yes	-6.16667	146.0	Papunesia	Eastern Highlands	Trans-New Guinea	974
+2	Agta (Central)	5.0	6.25	no	yes	17.96667	121.83333	Papunesia	Greater Central Philippine	Austronesian	214
+3	Aguacatec	5.0	7.25	no	yes	15.416670000000002	-91.33333	North America	Mayan	Mayan	2609
+4	Amarakaeri	5.5	6.25	no	yes	-12.5	-70.5	South America	Harakmbet	Harakmbet	257
+5	Ampeeli	5.0	5.0	no	yes	-6.75	146.08333000000005	Papunesia	Angan	Trans-New Guinea	1918
+6	Amuzgo	6.0	8.25	yes	yes	16.83333	-98.0	North America	Amuzgoan	Oto-Manguean	300
+7	Angaatiha	5.0	7.25	yes	yes	-7.21667	146.25	Papunesia	Angan	Trans-New Guinea	1955
+8	Apinay?	5.0	5.0	no	yes	-5.5	-48.0	South America	Ge-Kaingang	Macro-Ge	161
+9	Arabela	5.0	5.0	no	yes	-2.0	-75.16667	South America	Zaparoan	Zaparoan	183
+10	Arabic (Lebanese)	6.0	5.0	yes	yes	34.0	36.0	Eurasia	Semitic	Afro-Asiatic	1320
+11	Bahinemo	5.0	6.25	no	yes	-4.58333	142.83333000000005	Papunesia	Sepik Hill	Sepik	48
+12	Bauzi	5.0	5.0	no	yes	-2.5	137.5	Papunesia	East Geelvink Bay	East Geelvink Bay	188
+13	Berik	5.0	5.0	no	yes	-2.25	138.83333000000002	Papunesia	Tor	Tor-Orya	170
+14	B?t?	3.0	3.5	no	no	6.25	-6.25	Africa	Kru	Niger-Congo	247
+15	Bhili	5.0	7.25	no	yes	22.0	73.0	Eurasia	Indic	Indo-European	15
+16	Buglere	6.0	6.25	yes	yes	8.5	-81.25	North America	Guaymiic	Chibchan	1153
+17	Cakchiquel	6.0	6.25	yes	yes	14.5	-91.0	North America	Mayan	Mayan	1293
+18	Campa (Axininca)	3.0	3.5	no	no	-12.0	-74.0	South America	Pre-Andine Arawakan	Arawakan	415
+19	Cams?	6.0	9.5	yes	yes	1.16667	-77.0	South America	Cams?	Cams?	2158
+20	Candoshi	5.5	5.0	yes	yes	-4.16667	-77.0	South America	Candoshi	Candoshi	140
+21	Cavine?a	5.0	6.25	no	yes	-13.333329999999998	-66.5	South America	Tacanan	Tacanan	165
+22	Cayapa	5.0	5.0	no	yes	0.66667	-79.0	South America	Barbacoan	Barbacoan	83
+23	Ch?cobo	4.0	3.5	no	no	-12.16667	-66.75	South America	Panoan	Panoan	177
+24	Chavacano	6.0	9.5	yes	yes	7.0	122.08333	Papunesia	Creoles and Pidgins	other	300
+25	Chayahuita	5.0	6.25	no	yes	-5.5	-77.0	South America	Cahuapanan	Cahuapanan	685
+26	Chinantec (Lealao)	5.0	7.25	no	yes	17.33333	-95.91667	North America	Chinantecan	Oto-Manguean	518
+27	Chiquitano	6.0	9.5	yes	yes	-17.5	-60.0	South America	Chiquito	Chiquito	370
+28	Chumburung	5.5	7.25	yes	yes	7.75	0.25	Africa	Kwa	Niger-Congo	75
+29	Cof?n	5.0	6.25	no	yes	0.16667	-77.16667	South America	Cof?n	Cof?n	402
+30	Cree (Swampy)	5.0	5.0	yes	yes	56.0	-90.0	North America	Algonquian	Algic	165
+31	Culina	4.0	3.5	no	yes	-6.0	-70.5	South America	Arauan	Arauan	172
+32	Dan	3.0	3.5	no	no	7.5	-8.0	Africa	Eastern Mande	Mande	734
+33	Didinga	5.0	7.25	no	yes	4.5	33.5	Africa	Surmic	Eastern Sudanic	936
+34	Dyimini	6.0	6.25	yes	yes	8.41667	-4.41667	Africa	Gur	Niger-Congo	273
+35	Ejagham	3.0	3.5	no	no	5.41667	8.66667	Africa	Bantoid	Niger-Congo	227
+36	English	6.0	3.5	yes	yes	52.0	0.0	Eurasia	Germanic	Indo-European	136
+37	Ese Ejja	5.0	7.25	no	yes	-11.0	-66.0	South America	Tacanan	Tacanan	132
+38	Folopa	4.5	5.0	no	yes	-7.0	144.5	Papunesia	Teberan	Teberan-Pawaian	616
+39	French	6.0	5.0	yes	yes	48.0	2.0	Eurasia	Romance	Indo-European	124
+40	Gar?funa	6.0	9.5	yes	yes	15.666670000000002	-88.0	North America	Caribbean Arawakan	Arawakan	325
+41	German	6.0	9.5	yes	yes	52.0	10.0	Eurasia	Germanic	Indo-European	192
+42	Guahibo	5.0	6.25	no	yes	5.0	-69.0	South America	Guahiban	Guahiban	148
+43	Guambiano	5.5	6.25	no	yes	2.5	-76.66667	South America	Barbacoan	Barbacoan	1712
+44	Guarij?o	5.0	6.25	no	yes	27.75	-108.66667	North America	Tarahumaran	Uto-Aztecan	1283
+45	Gunu	3.5	3.5	no	no	4.58333	11.25	Africa	Bantoid	Niger-Congo	451
+46	Halbi	5.0	5.0	no	yes	21.0	81.0	Eurasia	Indic	Indo-European	305
+47	Huastec	5.0	6.25	no	yes	22.08333	-99.33333	North America	Mayan	Mayan	577
+48	Huave (San Mateo del Mar)	6.0	9.5	yes	yes	16.21667	-95.0	North America	Huavean	Huavean	9
+49	Iduna	5.0	5.0	no	yes	-9.33333	150.25	Papunesia	Oceanic	Austronesian	894
+50	Ifugao (Batad)	5.0	5.0	yes	yes	16.83333	121.08333	Papunesia	Northern Luzon	Austronesian	935
+51	Iwam	5.0	5.0	no	yes	-4.33333	142.0	Papunesia	Upper Sepik	Sepik	33
+52	Japanese	6.0	5.0	yes	yes	37.0	140.0	Eurasia	Japanese	Japanese	389
+53	Kalam	6.0	6.25	no	yes	-5.25	144.58333000000005	Papunesia	Madang	Trans-New Guinea	2473
+54	Kamano-Kafe	6.0	6.25	no	yes	-6.25	145.66666999999995	Papunesia	Eastern Highlands	Trans-New Guinea	1503
+55	Karaj?	4.0	5.0	no	yes	-10.0	-50.33333	South America	Karaj?	Macro-Ge	176
+56	Kemtuik	5.0	5.0	no	yes	-2.66667	140.33333000000002	Papunesia	Nimboran	Nimboran	150
+57	Kokni	6.0	7.25	yes	yes	20.75	73.5	Eurasia	Indic	Indo-European	158
+58	Konkomba	3.5	3.5	no	no	10.0	0.08333	Africa	Gur	Niger-Congo	159
+59	Korean	6.0	3.5	yes	yes	37.5	128.0	Eurasia	Korean	Korean	193
+60	Kriol (Ngukurr)	6.0	3.5	yes	yes	-14.833329999999998	135.0	Australia	Creoles and Pidgins	other	12
+61	Kuna	5.0	7.25	no	yes	8.0	-77.33333	South America	Kuna	Chibchan	514
+62	Kwerba	3.0	3.5	no	yes	-2.25	138.5	Papunesia	Kwerba	Kwerba	97
+63	Lele	4.0	3.5	no	yes	9.08333	15.583329999999998	Africa	East Chadic	Afro-Asiatic	447
+64	Mampruli	5.5	6.25	no	yes	10.33333	-0.66667	Africa	Gur	Niger-Congo	162
+65	Mandarin	6.0	8.25	yes	yes	34.0	110.0	Eurasia	Chinese	Sino-Tibetan	1005
+66	Maring	5.5	5.0	no	yes	-5.5	144.66666999999995	Papunesia	Chimbu	Trans-New Guinea	1028
+67	Martu Wangka	5.0	5.0	yes	yes	-21.5	126.0	Australia	Western Pama-Nyungan	Pama-Nyungan	328
+68	Mats?s	4.0	3.5	no	yes	-5.41667	-73.25	South America	Panoan	Panoan	160
+69	Mawchi	5.0	7.25	no	yes	21.33333	73.66667	Eurasia	Indic	Indo-European	116
+70	Mazahua	6.0	9.5	yes	yes	19.41667	-99.91667	North America	Otomian	Oto-Manguean	2613
+71	Mazatec (Chiquihuitl?n)	5.5	9.5	no	yes	17.75	-96.91667	North America	Popolocan	Oto-Manguean	1180
+72	Menya	5.0	6.25	no	yes	-7.25	146.0	Papunesia	Angan	Trans-New Guinea	1109
+73	Micmac	6.0	6.25	yes	yes	45.0	-63.0	North America	Algonquian	Algic	100
+74	Mikasuki	5.0	8.25	no	yes	32.0	-85.0	North America	Muskogean	Muskogean	152
+75	Mixtec (Pe?oles)	5.0	7.25	no	yes	17.08333	-96.91667	North America	Mixtecan	Oto-Manguean	1951
+76	M?nd?	3.0	3.5	no	no	4.5	30.0	Africa	Ubangi	Niger-Congo	808
+77	Murle	5.0	6.25	no	yes	6.5	33.5	Africa	Surmic	Eastern Sudanic	393
+78	Nafaanra	3.0	3.5	no	no	8.0	-2.58333	Africa	Gur	Niger-Congo	294
+79	Nahuatl (North Puebla)	6.0	8.25	yes	yes	20.0	-98.25	North America	Aztecan	Uto-Aztecan	2482
+80	Ndyuka	6.0	6.25	yes	yes	4.5	-54.5	South America	Creoles and Pidgins	other	68
+81	Ng?bere	6.0	7.25	yes	yes	8.66667	-82.0	North America	Guaymiic	Chibchan	1012
+82	Ocaina	5.0	6.25	no	yes	-2.75	-71.75	South America	Huitoto	Huitotoan	100
+83	O'odham	5.0	8.25	no	yes	32.0	-112.0	North America	Tepiman	Uto-Aztecan	663
+84	Patep	5.5	6.25	no	yes	-6.91667	146.58333000000005	Papunesia	Oceanic	Austronesian	1332
+85	Pech	5.0	5.0	no	yes	15.0	-85.5	North America	Paya	Chibchan	556
+86	Pirah?	4.0	3.5	no	no	-7.0	-62.0	South America	Mura	Mura	64
+87	Russian	6.0	3.5	yes	yes	56.0	38.0	Eurasia	Slavic	Indo-European	183
+88	Saramaccan	5.5	9.5	no	yes	4.5	-55.5	South America	Creoles and Pidgins	other	114
+89	Seri	5.0	6.25	no	yes	29.0	-112.0	North America	Seri	Hokan	91
+90	Shipibo-Konibo	5.0	6.25	no	yes	-7.5	-75.0	South America	Panoan	Panoan	149
+91	Sirion?	5.0	5.0	no	yes	-15.583329999999998	-64.0	South America	Tupi-Guaran?	Tupian	170
+92	Slave	6.0	7.25	yes	yes	67.0	-125.0	North America	Athapaskan	Na-Dene	319
+93	Spanish	6.0	7.25	yes	yes	40.0	-4.0	Eurasia	Romance	Indo-European	507
+94	Sursurunga	5.0	6.25	no	yes	-4.0	152.76667	Papunesia	Oceanic	Austronesian	762
+95	Tabla	5.0	6.25	no	yes	-2.45	140.41666999999998	Papunesia	Sentani	Sentani	1334
+96	Tacana	5.5	6.25	no	no	-13.5	-68.0	South America	Tacanan	Tacanan	209
+97	Tarahumara (Central)	5.0	5.0	no	no	27.5	-107.5	North America	Tarahumaran	Uto-Aztecan	2170
+98	Tarahumara (Western)	5.0	6.25	no	yes	27.5	-108.0	North America	Tarahumaran	Uto-Aztecan	2258
+99	Tboli	5.0	6.25	no	yes	6.16667	124.5	Papunesia	Bilic	Austronesian	490
+100	Teribe	5.5	7.25	no	yes	9.33333	-82.66667	North America	Talamanca	Chibchan	767
+101	Ticuna	5.0	6.25	no	yes	-4.0	-70.5	South America	Ticuna	Ticuna	98
+102	Tifal	4.0	3.5	no	yes	-5.0	141.33333000000005	Papunesia	Ok	Trans-New Guinea	2333
+103	Tlapanec	5.0	8.25	no	yes	17.08333	-99.0	North America	Subtiaba-Tlapanec	Oto-Manguean	733
+104	Tol	5.0	5.0	no	yes	14.666670000000002	-87.0	North America	Tol	Tol	1314
+105	Tsafiki	5.0	5.0	no	yes	-1.0	-79.33333	South America	Barbacoan	Barbacoan	115
+106	Tucano	5.0	5.0	no	no	0.5	-69.16667	South America	Tucanoan	Tucanoan	128
+107	Vagla	4.0	3.5	no	yes	9.41667	-2.41667	Africa	Gur	Niger-Congo	310
+108	Vasavi	5.0	6.25	no	yes	24.5	71.5	Eurasia	Indic	Indo-European	22
+109	Warlpiri	5.0	6.25	no	yes	-20.0	132.33333000000002	Australia	Western Pama-Nyungan	Pama-Nyungan	288
+110	Wobe	3.0	3.5	no	no	7.41667	-7.33333	Africa	Kru	Niger-Congo	315
+111	Yakan	6.0	3.5	yes	yes	6.5	122.0	Papunesia	Sama-Bajaw	Austronesian	689
+112	Yaminahua	5.0	5.0	no	yes	-8.0	-73.0	South America	Panoan	Panoan	242
+113	Yucuna	5.0	6.25	no	yes	-0.75	-71.0	South America	Inland Northern Arawakan	Arawakan	162
+114	Yupik (Siberian)	5.0	6.25	no	yes	65.0	-173.0	Eurasia	Eskimo	Eskimo-Aleut	657
+115	Zapotec (Texmelucan)	5.0	6.25	no	yes	16.5	-97.16667	North America	Zapotecan	Oto-Manguean	1588
