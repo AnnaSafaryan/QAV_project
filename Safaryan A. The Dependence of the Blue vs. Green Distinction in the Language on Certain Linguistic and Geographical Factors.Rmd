@@ -1,0 +1,566 @@
+---
+title: The Dependence of the Blue vs. Green Distinction in the Language on Certain
+  Linguistic and Geographical Factors
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+require(tidyverse)
+require(vcd)
+require(stats)
+require(party)
+require(lsr)
+```
+
+
+# Introduction
+
+According to the universals and evolution theory of basic color terms, there are three types of colour categories:
+
+1. Primary, there are six of them: black, white, red, yellow, green and blue.
+2. Composite, which are a fuzzy unions of primariesnd are perceived by native speakers as a single color that does not consist of primary ones. Frequent example is grue (green + blue).
+3. Derived, which are perceived by native speakers as a mix of primary colors (gray = black and white, purple = red and blue, etc.)
+
+All of these color categories can be included in the basic set of colour categories in the language. Basic colours have some properties:
+
+- have terms that are not derived from any object of this color and are not borrowed from another language (or have been borrowed for a long time and do not perceived as borrowed)
+- can be combined with a wide and open set of object classes
+- intuitively percieved as the primary (incl. do not consist of the terms of the other colours).
+
+According to the evolution theory of basic color terms, languages go through several stages of development of color categories from several composites to the moment when all six primary colors receive their terms. This can happen in different ways, as shown in the image:
+
+![A Typological and Evolutionary Scheme Covering Most World Color Survey Languages (Source: Kay and Maffi 1999)](загруженное.png)
+
+Although there are several paths, the division into blue and green always happens the last. More than that, usually derived base categories appear after stage 5, when the language already has 6 primary non-derived colour categories. But there are often exceptions.
+	
+-------------------------------------------------------------------------------
+	
+# A Hypothesis
+The hypothesis of this study is that the distinction between blue and green colours in the language depends on:
+
+-	the number of basic colour categories in the language,
+-	red vs. yellow differentiation in the language,
+and possibly depends on:
+-	genealogical classification of the language,
+-	the macroarea where the language is spoken,
+-	geographical characteristics: longitude, latitude, altitude, and annual precipitation.
+
+The number of non-derived basic colours seems irrelevant for this hypothesis, since it itself is rather a consequence of the presence of the blue vs. green distinction  in the language.
+
+-------------------------------------------------------------------------------
+
+# Research Design
+
+### Variables
+
+During the research the following variables will be used (the target variable is marked in bold):
+
+|№	| name	| type |
+|:-:|:------|:-----|
+|1	| number of non-derived colour categories in the language | numeric|
+|2	| number of base colour categories in the language |	numeric|
+|3	| red vs. yellow differentiation in the language	| binary|
+|__0__	| __blue vs. green differentiation in a language__	| __binary__|
+|4	| genealogical classification of the language (family) | categorical|
+|5	| genealogical classification of the language (group)	| categorical|
+|6	| macroarea	| categorical|
+|7	| latitude	| numeric|
+|8	| longitude	| numeric|
+|9	| altitude |	numeric|
+|10	| annual precipitation	| numeric
+
+Initially, the red vs. yellow and blue vs. green distinctions are nominal variables with a set of variants containing composites with other colours (for example, black/blue vs. green), but for this study, all variants will be reduced to binary categories. Data on the number of basic colour categories is partially fuzzy and contains intervals from the minimum to the maximum value (for example, 7-7.5). In this case, the average values will be used. 
+
+Among the available data, there are three languages in which one of the studied colours does not exist among the basic ones, so the classification is not applicable to it. It would be interesting to explore these cases, but for the purpose of this research, these objects will be deleted. In addition, the number of objects in different data differs slightly: 120 languages for chapters 132-133 and 119 languages for chapters 133-134. Information about the blue vs. green distinction and yellow vs. red distinction (or the absence of these categories) was not found for the Cahuilla language, so it will be excluded from the study.
+
+Although the number of non-derived colours will not be used to estimate the significance of features, this variable will not be removed from the data. So, it will be possible to check whether this feature is really the consequent of the blue vs. green distinction and explains our data fully.
+
+Since language families and groups are related features (one completely nested in the other), only one feature should be selected for the study. 
+
+Precipitation was collected from a map that was colored in the colors of the ranges of annual precipitation from maximum to minimum. The ranges are as follows: less than 100 mm, 100-250, 250-500, 500-1000, 1000-2000, 2000-3000, 3000-5000, more than 5000 mm. For each range, its minimum border was specified: a language located in an area with an annual precipitation of 500-1000 mm would receive a label of 500. Although this data is categorical in form, it is essentially numerical and will be considered so in this study.
+
+### Stages
+
+To better understand the data, the first stage of the study will be descriptive statistics and visualization of various feature combinations.
+
+Then statistical tests will be performed to assess the significance of the features.
+
+##### __Pearson's/Spearman's correlation test__ 
+|№  | Null hypothesis (H0)	| Alternative hypothesis (HA)	|
+|:-:|:----------------------|:----------------------------|
+|1	|There is no linear assotiation between the number of non-derived basic colours and the number of overall basic colours in the language | There is a statistically significant linear assotiation between the number of non-derived basic colours and the number of overall basic colours in the language |
+
+Based on the correlation presence, the number of overall basic color categories in the language will either be discarded, as well as non-derived, or left as a variable.
+
+##### __t-test__ 
+|№  | Null hypothesis (H0)	| Alternative hypothesis (HA)	|
+|:-:|:----------------------|:----------------------------|
+|1	|There is no relationship between the number of non-derived colours and the blue vs. green distinction in the language | There is a statistically significant relationship between the number of non-derived colours and the blue vs. green distinction in the language |
+|2 | There is no relationship between the number of basic colours and the blue vs. green distinction in the language | There is a statistically significant relationship between the number of basic colours and the blue vs. green distinction in the language |
+|3	| There is no relationship between the territory latitude and the blue vs. green distinction in the language	| There is a statistically significant relationship between the territory latitude and the blue vs. green distinction in the language	|
+|4	| There is no relationship between the territory longitude and the blue vs. green distinction in the language	| There is a statistically significant relationship between the territory longitude and the blue vs. green distinction in the language	|
+|5	| There is no relationship between the territory altitude and the blue vs. green distinction in the language	| There is a statistically significant relationship between the territory altitude and the blue vs. green distinction in the language	|
+|6 | There is no relationship between the annual precipitation and the blue vs. green distinction in the language | There is a statistically significant relationship between the annual precipitation and the blue vs. green distinction in the language |
+
+##### __Chi-square/Fisher's exact test, Cramer’s V, odds__ 
+|№  | Null hypothesis (H0)	| Alternative hypothesis (HA)	|
+|:-:|:----------------------|:----------------------------|
+|1	|There is no relationship between the red vs. yellow distinction and the blue vs. green distinction in the language	| There is a statistically significant relationship between the red vs. yellow distinction and the blue vs. green distinction in the language|
+|2	|There is no relationship between the macroarea and the blue vs. green distinction in the language	| There is a statistically significant relationship between the macroarea and the blue vs. green distinction in the language|
+|3	|There is no relationship between the language family and the blue vs. green distinction in the language | There is a statistically significant relationship between the language family and the blue vs. green distinction in the language|
+
+
+Two classification models will be used: decision tree and logistic regression. Models will be trained both using the non-derived variable to see how well this variable explains the data, and without it to assess the real significance of the other variables. The feature significances obtained by the two models will be compared with each other and with the results of statistical tests. In addition, the resulting decision tree will be plotted and interpreted.
+
+It should be noted that we will not divide the data into a training and test samples, because the purpose of the study is to estimate the significance of parameters that potentially affect the green vs blue distinction in the language. We have only 116 objects, and additional separation would lead to a critical lack of data and incorrect estimates of the parameter significance.
+
+The final stage of the research will be the generalization and interpretation of the results obtained.
+
+The following R packages are to be used for research purposes: tidyverse, ggplot2, vcd, stats, lsr, party. Data collection and preprocessing will be performed using python. 
+
+-------------------------------------------------------------------------------
+
+# Description of Data Collection Method
+
+The research will be based on data obtained from the open database of structural linguistic features *World Atlas of Language Structures* (WALS), chapters 132 — 135: *Number of Non-Derived Basic Colour Categories*, *Number of Basic Colour Categories*, *Green and Blue*, *Red and Yellow*. These chapters provide the following information for languages:
+
+1. the number of non-derived basic colour categories;
+2. the number of overall basic colour categories;
+3. whether red and yellow exist as two separate base colours or a composite (possibly with some third colour);
+4. whether blue and green exist as two separate base colours or a composite (possibly with some third colour).
+
+This data is the result of the World Color Survey, a project of a collaboration of researchers at the University of California, Berkeley, and the Summer Institute of Linguistics. They collected colour-naming data from 110 languages being studied by SIL translators in the late 1970s
+
+Information about genealogy, macroarea, latitude and longitude will be also obtained from the WALS site using python. In addition, information about altitude will be collected from [the Internet](https://www.advancedconverter.com/map-tools/find-altitude-by-coordinates) using python, and precipitation for all coordinates will be collected manually using [specialized map](http://www.200stran.ru/maps_group28_item1439.html).
+
+-------------------------------------------------------------------------------
+
+# Collected Data Description
+
+```{r}
+data <- read.csv('https://raw.githubusercontent.com/AnnaSafaryan/QAV_project/master/data.tsv', sep = '\t')
+```
+Variables:
+
+- id
+- language
+- nonderived - number of non-derived color categories in the language (up to 6)
+- basic - the overall number of basic color categories in the language
+- gb - does the language distinguish between blue and green
+- ry - does the language distinguish between red and yellow
+- latitude - geographical latitude (North/South, from -90 to 90)
+- longitude - geographical longitude (West/East, from -180 to 180)
+- macroarea - the continent/region the language belongs to
+- genus - genealogical classification (nested)
+- family - genealogical classification
+- altitude - the geographical altitude above sea level
+- precipitation - total annual precipitation for the coordinate
+
+Totally 116 objects without missing values were selected for the study.
+
+```{r}
+# convert factor variables
+data$gb <- as.logical(data$gb)
+data$ry <- as.logical(data$ry)
+data$macroarea <- as.factor(data$macroarea)
+data$genus <- as.factor(data$genus)
+data$family <- as.factor(data$family)
+head(data)
+```
+
+Let us drop the first two columns, leaving only the features and the target variable.
+```{r}
+features <- data[,3:13]
+head(features)
+```
+
+
+Now let us see how many values of each category we have:
+```{r}
+table(features$ry, features$gb)
+table(features$macroarea, features$gb)
+head(table(features$family, features$gb))
+head(table(features$genus, features$gb))
+```
+
+For the language family and group, there are few occurrences and a lot of zeros, so these variables do not have any predictive power, and it makes no sense to train models on them. We have to remove them from the dataset.
+
+```{r}
+features_clean <- subset(features, select = -c(genus, family))
+head(features_clean)
+```
+
+
+### Descriptive Statistics 
+
+```{r}
+summary(features)
+```
+
+The data contains both languages that have already some derived color categories and that still contain composite ones. At the same time, most of the languages belong to a fairly narrow and relatively close to the equator zone of only about 23 degrees of latitude, so they not perfectly balanced. Also on average they belong to zones with moderate precipitation.
+
+
+
+```{r}
+features %>%
+  filter(nonderived == 6, gb == FALSE)
+```
+There are only two languages in Papunesia in which there is no blue vs. green distinction, but apparently there are some other non-derived color categories. However, the number of overall basic colors is not integer, so the researchers have identified fuzzy categories.
+
+Out of 116 languages, 44 have developed derived basic categories without developing non-derived categories for all 6 primary colours. This corresponds to the evolutionary theory of colour categories, since it allows for a significant number of exceptions.
+```{r}
+features %>% 
+  filter(nonderived < 6, basic >= 6) -> excepts 
+nrow(excepts)
+summary(excepts)
+```
+
+At the same time, the number of non-derived colour categories is equal to 5 or is already slightly shifted to 6, and in the vast majority of such languages there is no blue vs. green distinction, which confirms the statement that this devision occurs last. It is also interesting that most of these languages are located in North or South America at a relatively low altitude above sea level, and some are also located in an area with significant precipitation. 
+```{r}
+excepts %>% 
+  filter(precipitation == 3000)
+```
+
+
+### Visualisatons
+
+
+```{r}
+mosaic(~ gb + ry, data=features, shade=FALSE, legend=TRUE)
+```
+
+Indeed, there are no languages in the data presented that distinguish between blue and green but do not distinguish between red and yellow.
+
+```{r}
+data %>%
+  ggplot(aes(macroarea, fill=gb)) +
+  geom_bar() +
+  labs(title = "Macroareas ~ green vs blue distinction",
+             x = "Macroarea")+
+  scale_fill_discrete("green vs blue distinction")
+```
+
+Eurasia, North America and Australia have a large proportion of languages that distinguish between blue and green.
+
+```{r}
+data %>% 
+  ggplot(aes(longitude, latitude, color = gb))+
+  geom_jitter(width = 0.2)+
+  labs(title = "Coordinates ~ green vs blue distinction",
+       x = "longitude",
+       y = "latitude")+
+  theme_bw()
+```
+
+```{r}
+data %>% 
+  ggplot(aes(nonderived, basic, color = gb))+
+  geom_jitter(width = 0.2)+
+  labs(title = "Number of non-derived terms, number of basic terms ~ green vs blue distinction",
+       x = "nonderived",
+       y = "basic")+
+  theme_bw()
+```
+
+This plot already shows how well does nonderived variable explains the data. 
+
+```{r}
+data %>% 
+  ggplot(aes(latitude, basic, color = gb))+
+  geom_jitter(width = 0.2)+
+  labs(title = "Latitude, number of basic terms ~ green vs blue distinction",
+       x = "latitude",
+       y = "number of basic terms")+
+  theme_bw()
+```
+
+The data is better explained by latitude than by the number of basic colour categories.
+
+```{r}
+data %>% 
+  ggplot(aes(altitude, precipitation, color = gb))+
+  geom_jitter(width = 0.2)+
+  labs(title = "Altitude, precipitation ~ green vs blue distinction",
+       x = "altitude",
+       y = "precipitation")+
+  theme_bw()
+```
+
+Data are divided badly by altitude and precipitation.
+
+
+```{r}
+data %>% 
+  ggplot(aes(latitude, fill = gb, color = gb))+
+  geom_density(alpha = 0.4)+
+  geom_rug()+
+  labs(title = "Latitude density plot",
+       x = "latitude")
+```
+
+The latitude distribution for languages that distinguish between blue and green is flatter and has a higher average value. A large part of the languages without blue vs. green distinction is concentrated on lower values of latitude.
+
+
+According to the evolutionary theory of colours, derived colours usually appear after all primary get separate terms, but there are many exceptions. Let us see how these variables are distributed.
+```{r}
+data %>% 
+  ggplot(aes(nonderived, fill = gb, color = gb))+
+  geom_density(alpha = 0.4)+
+  geom_rug()+
+  labs(title = "Number of non-derived colour terms density plot",
+       x = "non-derived")
+```
+
+
+```{r}
+data %>% 
+  ggplot(aes(basic, fill = gb, color = gb))+
+  geom_density(alpha = 0.4)+
+  geom_rug()+
+  labs(title = "Number of basic colour terms density plot",
+       x = "basic")
+```
+
+The distributions are abnormal and quite different from each other. 
+
+# Hypothesis Testing
+
+### Correlation for numerical variables
+
+We can notice that the number of basic and non-derived colors have different distributions. But is there a correlation between them? Since the distribution is not normal, we use Spearman's test.
+
+- H0: There is no linear assotiation between the number of non-derived basic colours and the number of overall basic colours in the language 
+- HA: There is a statistically significant linear assotiation between the number of non-derived basic colours and the number of overall basic colours in the language 
+```{r}
+cor.test(features$nonderived, features$basic, method = "spearman") 
+```
+p-value < 0,05, so we can reject H0. There is an average correlation between the variables, but it is not possible to say that one of them linearly affects on the other completely. As already mentioned, to estimate the influence of features on the blue vs. green distinction, we can discard the non-derived variable from the data, since it is rather determined by the presence of this division, but we will not discard the overall number of basic colours.
+
+
+### t-tests for numerical variables 
+
+1. the number of non-derived colours
+- H0: There is no relationship between the number of non-derived colours and the blue vs. green distinction in the language
+- H1: There is a statistically significant relationship between the number of non-derived colours and the blue vs. green distinction in the language 
+
+```{r}
+t.test(features$nonderived ~ features$gb)
+```
+p-value < 0,05, so we can reject H0.  
+
+
+2. the number of basic colours
+- H0: There is no relationship between the number of basic colours and the blue vs. green distinction in the language
+- H1: There is a statistically significant relationship between the number of basic colours and the blue vs. green distinction in the language 
+```{r}
+t.test(features$basic ~ features$gb)
+```
+p-value < 0,05, so we can reject H0. 
+
+3. latitude
+- H0: There is no relationship between the territory latitude and the blue vs. green distinction in the language
+- H1: There is a statistically significant relationship between the territory latitude and the blue vs. green distinction in the language
+```{r}
+t.test(features$latitude ~ features$gb)
+```
+p-value < 0,05, so we can reject H0. 
+
+
+4. longitude
+- H0: There is no relationship between the territory longitude and the blue vs. green distinction in the language
+- H1: There is a statistically significant relationship between the territory longitude and the blue vs. green distinction in the language
+```{r}
+t.test(features$longitude ~ features$gb)
+```
+p-value > 0,05, so we can not reject H0.
+
+5. altitude
+- H0: There is no relationship between the territory altitude and the blue vs. green distinction in the language
+- H1: There is a statistically significant relationship between the territory altitude and the blue vs. green distinction in the language
+```{r}
+t.test(features$altitude ~ features$gb)
+```
+p-value > 0,05, so we can not reject H0.
+
+6. annual precipitation
+- H0: There is no relationship between the annual precipitation and the blue vs. green distinction in the language
+- H1: There is a statistically significant relationship between the annual precipitation and the blue vs. green distinction in the language
+```{r}
+t.test(features$precipitation ~ features$gb)
+```
+p-value > 0,05, so we can not reject H0.
+
+
+### Chi-squares/Fisher tests for categorical variables
+
+The Chi-square can only be applied if the expected frequency is > 5, but there are many values less in our data. We will check everything using the Fischer's exact test.
+
+1. red vs. yellow distinction
+- H0: There is no relationship between the red vs. yellow distinction and the blue vs. green distinction in the language
+- H1: There is a statistically significant relationship between the red vs. yellow distinction and the blue vs. green distinction in the language
+```{r}
+ry_gb <- fisher.test(features$ry, features$gb)
+ry_gb
+cramersV(features$ry, features$gb)
+```
+p-value < 0,05, so we can reject H0. df in this case = 1, so the effect size 0.1 < 0.21 < 0.3 can be considered small.
+
+2. macroarea
+- H0: There is no relationship between the macroarea and the blue vs. green distinction in the language
+- H1: There is a statistically significant relationship between the macroarea and the blue vs. green distinction in the language
+```{r}
+area_gb <- fisher.test(features$macroarea, features$gb)
+area_gb
+cramersV(features$macroarea, features$gb)
+```
+p-value < 0,05, so we can reject H0. df in this case = 5, so the effect size 0.44 > 0.22can be considered large.
+
+### Results
+
+As a result of the tests, some of the features are actually statistically significant and have impact on the presence of the blue vs. green distinction in the language.
+
+Numeric features:
+
+- nonderived: the average number of non-derived categories in a language that has a blue-green composite is 4.73, and in a language that distinguishes between blue and green -- 5.85. It is natural that the p-value here is very small, since one event is a direct consequence of another. However, the fact that the average values in groups are not equal to integers confirms the existence of exceptions.
+- basic: the average number of basic colour categories in a language that has a blue-green composite is 5.61, and in a language that distinguishes between blue and green -- 6.62. However, the p-value is quite large compared to the pi-value for the nonderived variable, which confirms that it is worth including in further research.
+- latitude: languages that have a blue-green composite are located souther than languages that distinguish between blue and green: the average latitude is 4.46 and 20.79 degrees of the North latitude, respectively.
+
+Categorical features:
+
+- ry: the presence of red vs. yellow distinction in the language has a statistically significant association with the presence of blue vs. green distinction, although the effect size is small.
+- macroarea: the region has a huge effect on the distinction between blue and green in the language (however, this parameter may correlate with lalitude).
+
+Since the family and genus parameters do not have predictive power, it does not make sense to count the Fischer's test and Cramer's V for them. Unfortunately, we can't test the hypotheses related to the genealogical classification.
+
+---------------------------------------------------
+ 
+# Models
+
+Now let us apply classification models to our data and evaluate the significance of the parameters.
+
+### Decision Tree
+
+Firstly train the decision tree on all the features:
+```{r}
+tree_full <- ctree(gb~., data = features_clean)
+print(tree_full)
+```
+
+```{r}
+plot(tree_full)
+```
+
+Obviously, the nonderived variable is not just statistically significant, but also almost completely explains our data. As already mentioned, this is the result of it's relations with the target variable, which confirm the World Color Survey statement: in most cases, the number of non-derived categories in a language depends directly on the wheter there is blue vs. green distinction in it or not (despite this, there are outliers in both categories that were shown during the descriptive analysis).
+
+Now let us apply the model to the other features:
+```{r}
+tree_cut <- ctree(gb~basic+ry+latitude+longitude+macroarea+altitude+precipitation, data = features_clean)
+print(tree_cut)
+```
+
+```{r}
+plot(tree_cut)
+```
+
+This model highlights latitude and basic as the most significant features, which coincides with the results of t-tests, which have assigned these features p-value 0.0004 and 0.014 respectively.
+
+The fact that macroarea, which had a large effect size as a result of the Fisher's test, does not highlighted as the significant features may be explained by the relationship between this ariable and latitude. Indeed, macroarea takes the place of latitude:
+```{r}
+tree_cut <- ctree(gb~basic+ry+longitude+macroarea+altitude+precipitation, data = features_clean)
+print(tree_cut)
+```
+```{r}
+plot(tree_cut)
+```
+
+But removing the number of basic colours does not put any other feature in the second place.
+```{r}
+tree_cut <- ctree(gb~ry+latitude+longitude+macroarea+altitude+precipitation, data = features_clean)
+print(tree_cut)
+```
+
+
+#### Results
+
+Applying the decision tree to the features not only confirmed the significance of the features highlighted by t-test and the Fisher's test, but also provided additional information about the threshold values:
+
+- Languages located above 32 degrees of the North latitude tends to distinguish between blue and green.
+- Languages located below 32 degrees of the North latitude may not have the blue vs. green distinction, although the number of basic colours is close to 8 (that is, they are exceptions to the postulate that derived colors appear after the primary colors gets their non-derived categories).
+- Macroarea does not allow us to divide languages as clearly as latitude, but there is also something interesting: despite the fact that Australia is located below 32 degrees of the North latitude, it is in the same group with such continents as North America and Eurasia. 
+
+
+### Logistic Regression
+
+It is interesting to compare the results of the decision tree with the results of logistic regression.
+
+As in the previous paragraph, we train logistic regression on all parameters at first. 
+
+```{r}
+logreg_full <- glm(gb~., data = features_clean)
+summary(logreg_full)
+exp(logreg_full$coefficients)
+```
+
+As with the decision tree, the most important features are again nonderived and latitude. Interestingly, that the macroarea is only meaningful when the language belongs to Eurasia or Papunesia.
+Among the features that turned out to be significant as a result of statistical tests, the significance of the presence of red vs. yellow distinction in the language was also confirmed, but the number of basic colour categories did not highlighted as significant -- it was probably outweighed by the number of non-derived colours.
+In general, nonderived received the highest coefficient and significance code, which again coincides with the World Colour Survey statement that it is a consequence of our target variable.
+
+Now let us try to remove the nonderived variable and see what factors affect the distinction between blue and green (since the previous results are biased due to the presence of nonderived variable).
+```{r}
+logreg_clean <- glm(gb~.-nonderived, data = features_clean)
+summary(logreg_clean)
+exp(logreg_clean$coefficients)
+```
+
+As in the case of the decision tree, latitude is the most important parameter here. Then, as with statistical tests, the number of basic colour categories and partially macroarea are highlighted. Interestingly, longitude is also highlighted, although t-test did not reveal its effect on the target variable, but the distinction between red and yellow, which is significant according to the Fisher's test, is not highlighted. Australia became significant again (its special position was also shown by the decision tree) and Papunesia remained significant (this is explained by the results of the previous descriptive analysis).
+
+Despite the lower number of parameters compared to the first model, the Akaike criterion has become higher, so this model approximates data worse. This is understandable because we have removed the variable that directly follows from the target one.
+
+Based on the information obtained, we can build a logistic regression model that approximates our data in the best way with the smallest number of variables according to the AIC. All experiments and their resilts are [here](https://github.com/AnnaSafaryan/QAV_project/blob/master/aic.csv)
+
+```{r}
+logreg_small <- glm(gb~basic+latitude+longitude+macroarea, data = features_clean)
+summary(logreg_small)
+```
+
+
+
+# Results and Discussion
+
+The results of the study can be summarized as follows:
+
+1. The distinction between blue and green in a language is more influenced by its geographical position, and less by whether the language distinguishes between red and yellow.
+2. Languages located closer to the North (above 32 degrees of the North latitude) are more likely to distinguish between blue and green than languages located souther.
+3. Languages closer to the South are more likely to distinguish between blue and green if they already have more than 8 basic colour categories.
+4. The languages of Australia behave more like the languages of North America and Eurasia than the languages of South America, Africa, or even neighboring Papunesia. Perhaps this is a result of more dense communication with English and other European languages, since most of the continent is uninhabitable, and people have to live closely.
+5. In Papunesia, there are two genealogically close and neighboring languages in which blue and green have not yet got their separate categories, but some other non-derived ones have been added to the basic set.
+6. Many languages that have developed derived basic categories without developing non-derived ones for all 6 primary colours are located in North or South America at a relatively low altitude above sea level (although the latter was not highlighted as a significant feature).
+7. There is no connection between the blue vs. green distinction and the total annual precipitation or the territory altitude.
+
+Perhaps these results are due to the fact that the languages of Eurasia and North America are more influenced by the world languages (English, Chineese, Russian, etc.) in which this division is present.
+In addition, the result may be affected by the colour of the water: in south countries with a lot of sun and high temperature, it seems greener due to the large number of algae and micro-organisms living in it.
+
+It was impossible to estimate the significance of genealogical features, since the number of examples in each category was too small. For further research, it would be useful to group families on some basis (but not geographical). In addition, it may be a good idea to use data such as the average temperature and type of territory, and the presence of the sea nearby (this study used altitude, but it does not always mean the same).
+
+In addition, our data is almost entirely explained by the number of non-derived base color categories (a threshold value of 5.5). This corresponds to the statement of the evolutionary theory of colour that the division into blue and green happens last. We also found enough exceptions to the postulate that languages usually develop derived basic categories only after stage 5, when all primary colours have got separate terms (evolutionary theory allows these exceptions). This may explain the small dependence of the target variable on the distinction between red and yellow.
+
+# References
+- Hardin, C. L. and Maffi, Luisa (eds.) 1997. Color Categories in Thought and Language. Cambridge: Cambridge University Press.
+- Kay, Paul and Berlin, Brent and Merrifield, William. 1991. Biocultural Implications of Systems of Color Naming. Journal of Linguistic Anthropology 1. 12-25.
+- Kay, Paul and Berlin, Brent. 1997. Science ≠ Imperialism: There are non-trivial constraints on color naming. Behavioral and Brain Sciences 20. 196-201. (Peer Commentary on Saunders and van Brakel).
+- Kay, Paul and Berlin, Brent and Maffi, Luisa and Merrifield, William. 1997. Color Naming across Languages. In Hardin, C. L. and Maffi, Luisa (eds.), Color Categories in Thought and Language, 21-56. Cambridge: Cambridge University Press.
+- Kay, Paul and Maffi, Luisa. 1999. Color Appearance and the Emergence and Evolution of Basic Color Lexicons. American Anthropologist 101. 743-760.
+- [WALS](https://wals.info)
+
+
+
+
+
+
+
